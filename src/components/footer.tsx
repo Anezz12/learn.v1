@@ -1,3 +1,7 @@
 export default function Footer() {
-  return <div>Footer</div>;
+  return (
+    <footer className=" mt-auto text-center text-zinc-400 py-5 px-7 border-t">
+      <small>&copy; 2023. All right reserved.</small>
+    </footer>
+  );
 }

@@ -14,7 +14,7 @@ const navLinks = [
     label: "Posts",
   },
   {
-    href: "create-post",
+    href: "/create-post",
     label: "Create Post",
   },
 ];
@@ -22,13 +22,15 @@ export default function Header() {
   const pathname = usePathname();
   return (
     <header className="flex justify-between items-center py-4 px-7 border-b">
-      <Image
-        src="https://bytegrad.com/course-assets/youtube/example-logo.png"
-        alt="Logo"
-        className="w-[35px] h-[35px]"
-        width="35"
-        height="35"
-      />
+      <Link href="/">
+        <Image
+          src="https://bytegrad.com/course-assets/youtube/example-logo.png"
+          alt="Logo"
+          className="w-[35px] h-[35px]"
+          width="35"
+          height="35"
+        />
+      </Link>
       <nav>
         <ul className="flex gap-x-5 text-[14px] font-bold">
           {navLinks.map((link) => (

@@ -1,20 +1,16 @@
-import React from "react";
+import { createPost } from "@/actioins/actions";
+import Form from "@/components/form";
+import {
+  LogoutLink,
+  getKindeServerSession,
+} from "@kinde-oss/kinde-auth-nextjs/server";
 
-export default function page() {
+export default async function Page() {
   return (
     <main className="text-center pt-16">
       <h1 className="text-4xl md:text-5xl font-bold mb-5">Create Post</h1>
-      <form className="h-10 space-x-2 mt-10">
-        <input
-          type="text"
-          name="title"
-          placeholder="Title for new post"
-          className=" border rounded px-3 h-full"
-        />
-        <button className="h-full bg-blue-500 px-5 rounded text-white">
-          Submit
-        </button>
-      </form>
+      <Form />
+      <LogoutLink>Logout</LogoutLink>
     </main>
   );
 }

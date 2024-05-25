@@ -6,7 +6,7 @@ export default async function PostList() {
   const Post = await response.json();
   return (
     <ul>
-      {data.posts.map((post) => (
+      {Post.posts.map((post) => (
         <li key={post.id} className="mb-5">
           <Link href={`/posts/${post.id}`}>{post.title}</Link>
           {/* <p className="text-lg">{post.body}</p> */}
